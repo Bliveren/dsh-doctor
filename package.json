@@ -1,0 +1,48 @@
+{
+  "name": "dsh-doctor",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "One-command health check for a DeepSeek Harness installation: profiles, bundles, patch layers, links, credentials, disk, and stale backups — with a redacted report you can paste into Discussions.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "diagnostics"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=24.9",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "scripts": {
+    "test": "node --test test/checks.test.mjs"
+  },
+  "dependencies": {
+    "semver": "^7.7.2",
+    "yaml": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bliveren/dsh-doctor"
+  },
+  "homepage": "https://github.com/Bliveren/dsh-doctor#readme",
+  "bugs": "https://github.com/Bliveren/dsh-doctor/issues"
+}

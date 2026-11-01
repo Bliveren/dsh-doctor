@@ -1,0 +1,6 @@
+# The layer this bundle contributes to a profile. It inserts one row: the
+# plugin that registers the `dsh_doctor` tool. Users override this row — or
+# disable it — from their own profile patch without editing this package.
+- insert:
+    - id: dsh-doctor
+      name: dsh-doctor
